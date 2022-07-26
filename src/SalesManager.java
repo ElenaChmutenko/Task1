@@ -1,23 +1,23 @@
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
         }
         return max;
     }
-    public int trimAverage() {
-        int max = 0;
-        int min = sales[0];
-        int sum = 0;
+    public long trimAverage() {
+        long max = 0;
+        long min = sales[0];
+        long sum = 0;
         for (int i = 1; i < sales.length; i++) {
             if (sales[i] <= min) {
                 sum += min;
